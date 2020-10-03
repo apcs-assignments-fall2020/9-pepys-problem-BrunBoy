@@ -5,8 +5,20 @@ public class MyMain {
     // Returns in the answer as a double corresponding to the percentage
     // For example, 75.5% would be 75.5
     public static double probabilityOneSix() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        double smurky=0;
+        double murk=0;
+        for (int i=0; i<10000; i++){
+            for (int j=0; j<6; j++){
+                if (((Math.random()*6)+1)==6){
+                    smurky++;
+                }
+                else{
+                    smurky+=0;
+                }
+            }
+            murk++;
+        }
+        return ((smurky/murk)*100);
     }
 
     // Calculate the probability of rolling at least two 6's when rolling 
