@@ -5,34 +5,54 @@ public class MyMain {
     // Returns in the answer as a double corresponding to the percentage
     // For example, 75.5% would be 75.5
     public static double probabilityOneSix() {
-        double smurky=0;
-        double murk=0;
+        double mimmy=0;
         for (int i=0; i<10000; i++){
             for (int j=0; j<6; j++){
-                if (((Math.random()*6)+1)==6){
-                    smurky++;
-                }
-                else{
-                    smurky+=0;
+                if (((int) ((Math.random()*6)+1)) ==6){
+                    mimmy++;
+                    break;
                 }
             }
-            murk++;
         }
-        return ((smurky/murk)*100);
+        return mimmy/100;
     }
 
     // Calculate the probability of rolling at least two 6's when rolling 
     // twelve dice. Uses 10000 trials.
     public static double probabilityTwoSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        double mimmy=0;
+        double scarick=0;
+        for (int i=0; i<10000; i++){
+            for (int j=0; j<12; j++){
+                if (((int) ((Math.random()*6)+1)) ==6){
+                    mimmy++;
+                }
+            }
+            if (mimmy>=2){
+                scarick++;
+            }
+            mimmy=0;
+        }
+        return scarick/100;
     }
 
     // Calculate the probability of rolling at least three 6's when rolling 
     // eighteen dice. Uses 10000 trials.
     public static double probabilityThreeSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        double mimmy=0;
+        double scarick=0;
+        for (int i=0; i<10000; i++){
+            for (int j=0; j<18; j++){
+                if (((int) ((Math.random()*6)+1)) ==6){
+                    mimmy++;
+                }
+            }
+            if (mimmy>=3){
+                scarick++;
+            }
+            mimmy=0;
+        }
+        return scarick/100;
     }
 
 
